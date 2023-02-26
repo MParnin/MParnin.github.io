@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>0xMP</title>
+    <link>https://MParnin.github.io/</link>
+    <description>Recent content on 0xMP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Mom!</title>
+      <link>https://MParnin.github.io/posts/hellomom/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/posts/hellomom/</guid>
+      <description>Hey Mom checkout my new site!
+print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+  </channel>
+</rss>
