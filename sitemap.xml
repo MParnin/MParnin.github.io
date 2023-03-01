@@ -1,28 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://MParnin.github.io/projects/homelab/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/projects/cloudlab/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/posts/dactylmanuform/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
     <loc>https://MParnin.github.io/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://MParnin.github.io/posts/hellomom/</loc>
+  </url><url>
+    <loc>https://MParnin.github.io/conferences/bsidescharm2023/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://MParnin.github.io/about/aboutme/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/about/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/conferences/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/hackthebox/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/hackthebox/htb_armageddon/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/hackthebox/htb_bashed/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/hackthebox/htb_lame/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/overthewire/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/overthewire/otw_bandit/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
     <loc>https://MParnin.github.io/posts/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://MParnin.github.io/projects/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/tryhackme/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/tryhackme/thm_picklerick/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/tryhackme/thm_steelmountain/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/archives/</loc>
+  </url><url>
     <loc>https://MParnin.github.io/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://MParnin.github.io/search/</loc>
+  </url><url>
     <loc>https://MParnin.github.io/tags/</loc>
   </url>
-  
 </urlset>

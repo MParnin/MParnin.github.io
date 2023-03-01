@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://MParnin.github.io/sitemap.xml

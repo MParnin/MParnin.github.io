@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Writeups on 0xMP</title>
+    <link>https://MParnin.github.io/writeups/</link>
+    <description>Recent content in Writeups on 0xMP</description>
+    <image>
+      <title>0xMP</title>
+      <url>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox - Armageddon</title>
+      <link>https://MParnin.github.io/writeups/htb/htb_armageddon/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/htb/htb_armageddon/</guid>
+      <description>This will contain my write-up for HTB&amp;rsquo;s Armageddon
+1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Bashed</title>
+      <link>https://MParnin.github.io/writeups/htb/htb_bashed/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/htb/htb_bashed/</guid>
+      <description>Hey Mom checkout my new site!
+1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>HackTheBox - Lame</title>
+      <link>https://MParnin.github.io/writeups/htb/htb_lame/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/htb/htb_lame/</guid>
+      <description>Hey Mom checkout my new site!
+1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>Hello Mom!</title>
+      <link>https://MParnin.github.io/writeups/hellomom/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/hellomom/</guid>
+      <description>Hey Mom checkout my new site!
+1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>OverTheWire - Bandit</title>
+      <link>https://MParnin.github.io/writeups/overthewire/otw_bandit/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/overthewire/otw_bandit/</guid>
+      <description>This will contain my write-up for HTB&amp;rsquo;s Armageddon
+1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>TryHackMe - Pickle Rick</title>
+      <link>https://MParnin.github.io/writeups/thm/thm_picklerick/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/thm/thm_picklerick/</guid>
+      <description>This will contain my write-up for HTB&amp;rsquo;s Armageddon
+1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>TryHackMe - Steel Mountain</title>
+      <link>https://MParnin.github.io/writeups/thm/thm_steelmountain/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/writeups/thm/thm_steelmountain/</guid>
+      <description>This will contain my write-up for TryHackMe&amp;rsquo;s Steel Mountain.</description>
+    </item>
+    
+  </channel>
+</rss>

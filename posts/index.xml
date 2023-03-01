@@ -4,17 +4,23 @@
     <title>Posts on 0xMP</title>
     <link>https://MParnin.github.io/posts/</link>
     <description>Recent content in Posts on 0xMP</description>
+    <image>
+      <title>0xMP</title>
+      <url>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello Mom!</title>
-      <link>https://MParnin.github.io/posts/hellomom/</link>
+      <title>Dactyl Manuform Build: Ergonomic Mechanical Keyboard</title>
+      <link>https://MParnin.github.io/posts/dactylmanuform/</link>
       <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
       
-      <guid>https://MParnin.github.io/posts/hellomom/</guid>
-      <description>Hey Mom checkout my new site!
-print(&amp;#34;Hello Mom!&amp;#34;) </description>
+      <guid>https://MParnin.github.io/posts/dactylmanuform/</guid>
+      <description>This will contain info about my Dactyl Manuform build.
+Swiches: Kailh box jade
+Key caps: Drop MT3 /DEV/TTY ortho kit</description>
     </item>
     
   </channel>
