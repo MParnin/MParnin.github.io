@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>0xMP</title>
+    <title>MP</title>
     <link>https://MParnin.github.io/</link>
-    <description>Recent content on 0xMP</description>
+    <description>Recent content on MP</description>
     <image>
-      <title>0xMP</title>
+      <title>MP</title>
       <url>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://MParnin.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home Lab</title>
       <link>https://MParnin.github.io/projects/homelab/</link>
@@ -31,14 +31,12 @@
     </item>
     
     <item>
-      <title>Dactyl Manuform Build</title>
-      <link>https://MParnin.github.io/posts/dactylmanuform/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      <title>Blog Initial Configuration</title>
+      <link>https://MParnin.github.io/posts/blogconfig/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://MParnin.github.io/posts/dactylmanuform/</guid>
-      <description>This will contain info about my Dactyl Manuform build.
-Swiches: Kailh box jade
-Key caps: Drop MT3 /DEV/TTY ortho kit</description>
+      <guid>https://MParnin.github.io/posts/blogconfig/</guid>
+      <description>Brief walkthrough of the steps taken to create this blog in Linux</description>
     </item>
     
     <item>
@@ -57,6 +55,17 @@ Key caps: Drop MT3 /DEV/TTY ortho kit</description>
       
       <guid>https://MParnin.github.io/about/aboutme/</guid>
       <description>Achievements Virtual Hacking Labs Basic Certificate of Completion Certification Path TCM PNPT HackTheBox CPTS Offensive Security OSCP </description>
+    </item>
+    
+    <item>
+      <title>Dactyl Manuform Build</title>
+      <link>https://MParnin.github.io/posts/dactylmanuform/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/posts/dactylmanuform/</guid>
+      <description>This is currently a work-in-progress and will contain info about my Dactyl Manuform build.
+Swiches: Kailh box jade
+Key caps: Drop MT3 /DEV/TTY ortho kit</description>
     </item>
     
     <item>

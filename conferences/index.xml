@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Conferences on 0xMP</title>
+    <title>Conferences on MP</title>
     <link>https://MParnin.github.io/conferences/</link>
-    <description>Recent content in Conferences on 0xMP</description>
+    <description>Recent content in Conferences on MP</description>
     <image>
-      <title>0xMP</title>
+      <title>MP</title>
       <url>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>

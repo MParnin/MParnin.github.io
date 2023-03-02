@@ -1,0 +1,314 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Blog Initial Configuration | MP</title><meta name=keywords content><meta name=description content="Brief walkthrough of the steps taken to create this blog in Linux"><meta name=author content="MP"><link rel=canonical href=https://MParnin.github.io/posts/blogconfig/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.73a1ddd4ae34c44c2384f2ff7d03f01284083b233cf3c14b0fa3917f6be87c54.css integrity="sha256-c6Hd1K40xEwjhPL/fQPwEoQIOyM888FLD6ORf2vofFQ=" rel="preload stylesheet" as=style><link rel=icon href=https://MParnin.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://MParnin.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://MParnin.github.io/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://MParnin.github.io/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://MParnin.github.io/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-123-45","auto"),ga("send","pageview"))</script><meta property="og:title" content="Blog Initial Configuration"><meta property="og:description" content="Brief walkthrough of the steps taken to create this blog in Linux"><meta property="og:type" content="article"><meta property="og:url" content="https://MParnin.github.io/posts/blogconfig/"><meta property="og:image" content="https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-02T00:00:00+00:00"><meta property="article:modified_time" content="2023-03-02T00:00:00+00:00"><meta property="og:site_name" content="ExampleSite"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://MParnin.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Blog Initial Configuration"><meta name=twitter:description content="Brief walkthrough of the steps taken to create this blog in Linux"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://MParnin.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Blog Initial Configuration","item":"https://MParnin.github.io/posts/blogconfig/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Blog Initial Configuration","name":"Blog Initial Configuration","description":"Brief walkthrough of the steps taken to create this blog in Linux","keywords":[],"articleBody":"Installing/Updating Hugo Make sure installed version of Go is \u003e= 1.18: Check Go version: go version Install/update Go: https://go.dev/doc/install Check Hugo: hugo version Update Hugo: Download latest version: https://github.com/gohugoio/hugo/releases Install .deb file: sudo dpkg --install ./hugo_0.110.0_linux-amd64.deb Creating a New Site Install Hugo and prerequisites: https://gohugo.io/installation/ Create two repositories on Github: “Blog Repository” - Repository for storing website code: “Blog” Make Public, no README, simply click “Create repository” “Production Repository” - Repository for deploying website that’s hosted through Github Pages: “MParnin.github.io” Make Public, no README, simply click “Create repository” Choose theme for site: https://themes.gohugo.io/ (PaperMod was used for this site) Clone “Blog” to local machine: git clone git@github.com:MParnin/Blog.git Change to “Blog” directory: cd Blog Create a new Hugo site: hugo new site MParnin.github.io Change to new directory: cd MParnin.github.io Clone theme to newly created boiler plate code for website: git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1 Setup the config file: Open the config file in a text editor: code config.toml Add the theme to the end of the config file: theme = \"PaperMod\" Change the title: MP Change the base URL to match Github production repo: baseURL = https://MParnin.github.io/ Save changes and exit code editor Preview site locally: Make sure in directory with config.toml Run Hugo server: hugo server Visit the address of the local site: http://localhost:1313/ (can ctrl-click link in terminal) Stop server when finished viewing: Ctrl+c Test creating a new post: Create file: hugo new posts/hellomom.md Edit file: code /content/posts/hellomom.md Set title of post: title: \"Hello Mom!\" Delete draft mode line Add content below second “—”: Add plaintext: Hey Mom checkout my new site! Add code: 1 print(\"Hello Mom!\") Save and exit Add “Blog” as submodule to store static assets for website: Need one commit for “MParnin.github.io” repo and set the main branch to “main”: Make a temp directory to clone repo to: mkdir ~/tmp Change to temp directory: cd ~/tmp Clone Production repository: git clone git@github.com:MParnin/MParnin.github.io.git Change to cloned directory: cd MParnin.github.io Checkout a new branch: git checkout -b main Create a readme file: touch README.md Check status to see untracked files: git status Add new all new files to be tracked: git add . Commit tracked files: git commit -m \"Adding README\" Push to Main branch on Github: git push origin main Confirm on Github the file was added and branch is set to “main” Delete temp files: rm -rf tmp Add a git submodule which will reference “Production” repository: Change to root site directory: cd ~/Documents/Blog/MParnin.github.io Create submodule within root to deploy site from (site deployed from “public” submodule directory; static files that Hugo generates get added to this directory): git submodule add -b main git@github.com:MParnin/MParnin.github.io.git public Review site before deploying: hugo server Generate static files into “public”: Change to root site directory: cd ~/Documents/Blog/MParnin.github.io Create files for selected theme: hugo -t PaperMod Confirm files were generated: cd public Confirm origin is directed to Production repository: git remote -v Check status of files: git status Add all static files: git add . Commit static files: git commit -m \"Initial commit\" Push the origin files to the main branch: git push origin main Confirm all static files are in Production repo on Github. These files are now automatically deployed to https://MParnin.github.io. This site is published because it is hosted through Github Pages which can be seen in “Settings \u003e Pages” for the Production repositories settings. Creating a New Post Create a new post: Navigate to root of site: cd /Documents/Blog/MParnin.github.io Create new post file: hugo new posts/ Edit post: code /content/posts/.md Set title of post: title: \"Hello Mom!\" Delete draft mode Save and exit Generate static files into “public” and push to github to update site: Change to root site directory: cd ~/Documents/Blog/MParnin.github.io Create files for selected theme: hugo -t PaperMod Confirm files were generated: cd public Confirm origin is directed to Production repository: git remote -v Check status of files: git status Add all static files: git add . Commit static files: git commit -m \"Initial commit\" Push the origin files to the main branch: git push origin main Modifications Moved table of contents to left side of page: Replace the contents of themes/PaperMod/layouts/partials/toc.html with the following (comment out what is currently in the file): 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 {{- $headers := findRE \"\u003ch[1-6].*?\u003e(.|\\n])+?\u003c/h[1-6]\u003e\" .Content -}} {{- $has_headers := ge (len $headers) 1 -}} {{- if $has_headers -}} \u003caside id=\"toc-container\" class=\"toc-container wide\"\u003e \u003cdiv class=\"toc\"\u003e \u003cdetails {{if (.Param \"TocOpen\") }} open{{ end }}\u003e \u003csummary accesskey=\"c\" title=\"(Alt + C)\"\u003e \u003cspan class=\"details\"\u003e{{- i18n \"toc\" | default \"Table of Contents\" }}\u003c/span\u003e \u003c/summary\u003e \u003cdiv class=\"inner\"\u003e {{- $largest := 6 -}} {{- range $headers -}} {{- $headerLevel := index (findRE \"[1-6]\" . 1) 0 -}} {{- $headerLevel := len (seq $headerLevel) -}} {{- if lt $headerLevel $largest -}} {{- $largest = $headerLevel -}} {{- end -}} {{- end -}} {{- $firstHeaderLevel := len (seq (index (findRE \"[1-6]\" (index $headers 0) 1) 0)) -}} {{- $.Scratch.Set \"bareul\" slice -}} \u003cul\u003e {{- range seq (sub $firstHeaderLevel $largest) -}} \u003cul\u003e {{- $.Scratch.Add \"bareul\" (sub (add $largest .) 1) -}} {{- end -}} {{- range $i, $header := $headers -}} {{- $headerLevel := index (findRE \"[1-6]\" . 1) 0 -}} {{- $headerLevel := len (seq $headerLevel) -}} {{/* get id=\"xyz\" */}} {{- $id := index (findRE \"(id=\\\"(.*?)\\\")\" $header 9) 0 }} {{- /* strip id=\"\" to leave xyz, no way to get regex capturing groups in hugo */ -}} {{- $cleanedID := replace (replace $id \"id=\\\"\" \"\") \"\\\"\" \"\" }} {{- $header := replaceRE \"\u003ch[1-6].*?\u003e((.|\\n])+?)\u003c/h[1-6]\u003e\" \"$1\" $header -}} {{- if ne $i 0 -}} {{- $prevHeaderLevel := index (findRE \"[1-6]\" (index $headers (sub $i 1)) 1) 0 -}} {{- $prevHeaderLevel := len (seq $prevHeaderLevel) -}} {{- if gt $headerLevel $prevHeaderLevel -}} {{- range seq $prevHeaderLevel (sub $headerLevel 1) -}} \u003cul\u003e {{/* the first should not be recorded */}} {{- if ne $prevHeaderLevel . -}} {{- $.Scratch.Add \"bareul\" . -}} {{- end -}} {{- end -}} {{- else -}} \u003c/li\u003e {{- if lt $headerLevel $prevHeaderLevel -}} {{- range seq (sub $prevHeaderLevel 1) -1 $headerLevel -}} {{- if in ($.Scratch.Get \"bareul\") . -}} \u003c/ul\u003e {{/* manually do pop item */}} {{- $tmp := $.Scratch.Get \"bareul\" -}} {{- $.Scratch.Delete \"bareul\" -}} {{- $.Scratch.Set \"bareul\" slice}} {{- range seq (sub (len $tmp) 1) -}} {{- $.Scratch.Add \"bareul\" (index $tmp (sub . 1)) -}} {{- end -}} {{- else -}} \u003c/ul\u003e \u003c/li\u003e {{- end -}} {{- end -}} {{- end -}} {{- end }} \u003cli\u003e \u003ca href=\"#{{- $cleanedID -}}\" aria-label=\"{{- $header | plainify -}}\"\u003e{{- $header | safeHTML -}}\u003c/a\u003e {{- else }} \u003cli\u003e \u003ca href=\"#{{- $cleanedID -}}\" aria-label=\"{{- $header | plainify -}}\"\u003e{{- $header | safeHTML -}}\u003c/a\u003e {{- end -}} {{- end -}} {{- $firstHeaderLevel := $largest }} {{- $lastHeaderLevel := len (seq (index (findRE \"[1-6]\" (index $headers (sub (len $headers) 1)) 1) 0)) }} \u003c/li\u003e {{- range seq (sub $lastHeaderLevel $firstHeaderLevel) -}} {{- if in ($.Scratch.Get \"bareul\") (add . $firstHeaderLevel) }} \u003c/ul\u003e {{- else }} \u003c/ul\u003e \u003c/li\u003e {{- end -}} {{- end }} \u003c/ul\u003e \u003c/div\u003e \u003c/details\u003e \u003c/div\u003e \u003c/aside\u003e \u003cscript\u003e let activeElement; let elements; window.addEventListener('DOMContentLoaded', function (event) { checkTocPosition(); elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]'); // Make the first header active activeElement = elements[0]; const id = encodeURI(activeElement.getAttribute('id')).toLowerCase(); document.querySelector(`.inner ul li a[href=\"#${id}\"]`).classList.add('active'); }, false); window.addEventListener('resize', function(event) { checkTocPosition(); }, false); window.addEventListener('scroll', () =\u003e { // Check if there is an object in the top half of the screen or keep the last item active activeElement = Array.from(elements).find((element) =\u003e { if ((getOffsetTop(element) - window.pageYOffset) \u003e 0 \u0026\u0026 (getOffsetTop(element) - window.pageYOffset) \u003c window.innerHeight/2) { return element; } }) || activeElement elements.forEach(element =\u003e { const id = encodeURI(element.getAttribute('id')).toLowerCase(); if (element === activeElement){ document.querySelector(`.inner ul li a[href=\"#${id}\"]`).classList.add('active'); } else { document.querySelector(`.inner ul li a[href=\"#${id}\"]`).classList.remove('active'); } }) }, false); const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10); const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10); const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10); function checkTocPosition() { const width = document.body.scrollWidth; if (width - main - (toc * 2) - (gap * 4) \u003e 0) { document.getElementById(\"toc-container\").classList.add(\"wide\"); } else { document.getElementById(\"toc-container\").classList.remove(\"wide\"); } } function getOffsetTop(element) { if (!element.getClientRects().length) { return 0; } let rect = element.getBoundingClientRect(); let win = element.ownerDocument.defaultView; return rect.top + win.pageYOffset; } \u003c/script\u003e {{- end }} ","wordCount":"1502","inLanguage":"en","datePublished":"2023-03-02T00:00:00Z","dateModified":"2023-03-02T00:00:00Z","author":{"@type":"Person","name":"MP"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://MParnin.github.io/posts/blogconfig/"},"publisher":{"@type":"Organization","name":"MP","logo":{"@type":"ImageObject","url":"https://MParnin.github.io/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://MParnin.github.io/ accesskey=h title="MP (Alt + H)"><img src=https://MParnin.github.io/apple-touch-icon.png alt aria-label=logo height=35>MP</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://MParnin.github.io/about/aboutme title=About><span>About</span></a></li><li><a href=https://MParnin.github.io/write-ups/ title="CTF Write-ups"><span>CTF Write-ups</span></a></li><li><a href=https://MParnin.github.io/projects/ title=Projects><span>Projects</span></a></li><li><a href=https://MParnin.github.io/conferences/ title=Conferences><span>Conferences</span></a></li><li><a href=https://MParnin.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://MParnin.github.io/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://MParnin.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://MParnin.github.io/posts/>Posts</a></div><h1 class=post-title>Blog Initial Configuration</h1><div class=post-description>Brief walkthrough of the steps taken to create this blog in Linux</div><div class=post-meta><span title='2023-03-02 00:00:00 +0000 UTC'>March 2, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1502 words&nbsp;·&nbsp;MP</div></header><aside id=toc-container class="toc-container wide"><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#installingupdating-hugo aria-label="Installing/Updating Hugo">Installing/Updating Hugo</a></li><li><a href=#creating-a-new-site aria-label="Creating a New Site">Creating a New Site</a></li><li><a href=#creating-a-new-post aria-label="Creating a New Post">Creating a New Post</a></li><li><a href=#modifications aria-label=Modifications>Modifications</a></li></ul></div></details></div></aside><script>let activeElement,elements;window.addEventListener("DOMContentLoaded",function(){checkTocPosition(),elements=document.querySelectorAll("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]"),activeElement=elements[0];const t=encodeURI(activeElement.getAttribute("id")).toLowerCase();document.querySelector(`.inner ul li a[href="#${t}"]`).classList.add("active")},!1),window.addEventListener("resize",function(){checkTocPosition()},!1),window.addEventListener("scroll",()=>{activeElement=Array.from(elements).find(e=>{if(getOffsetTop(e)-window.pageYOffset>0&&getOffsetTop(e)-window.pageYOffset<window.innerHeight/2)return e})||activeElement,elements.forEach(e=>{const t=encodeURI(e.getAttribute("id")).toLowerCase();e===activeElement?document.querySelector(`.inner ul li a[href="#${t}"]`).classList.add("active"):document.querySelector(`.inner ul li a[href="#${t}"]`).classList.remove("active")})},!1);const main=parseInt(getComputedStyle(document.body).getPropertyValue("--article-width"),10),toc=parseInt(getComputedStyle(document.body).getPropertyValue("--toc-width"),10),gap=parseInt(getComputedStyle(document.body).getPropertyValue("--gap"),10);function checkTocPosition(){const e=document.body.scrollWidth;e-main-toc*2-gap*4>0?document.getElementById("toc-container").classList.add("wide"):document.getElementById("toc-container").classList.remove("wide")}function getOffsetTop(e){if(!e.getClientRects().length)return 0;let t=e.getBoundingClientRect(),n=e.ownerDocument.defaultView;return t.top+n.pageYOffset}</script><div class=post-content><h2 id=installingupdating-hugo>Installing/Updating Hugo<a hidden class=anchor aria-hidden=true href=#installingupdating-hugo>#</a></h2><ol><li>Make sure installed version of Go is >= 1.18:<ol><li>Check Go version: <code>go version</code><ol><li>Install/update Go: <a href=https://go.dev/doc/install>https://go.dev/doc/install</a></li></ol></li><li>Check Hugo: <code>hugo version</code><ol><li>Update Hugo:<ol><li>Download latest version: <a href=https://github.com/gohugoio/hugo/releases>https://github.com/gohugoio/hugo/releases</a></li><li>Install .deb file: <code>sudo dpkg --install ./hugo_0.110.0_linux-amd64.deb</code></li></ol></li></ol></li></ol></li></ol><h2 id=creating-a-new-site>Creating a New Site<a hidden class=anchor aria-hidden=true href=#creating-a-new-site>#</a></h2><ol><li>Install Hugo and prerequisites: <a href=https://gohugo.io/installation/>https://gohugo.io/installation/</a></li><li>Create two repositories on Github:<ol><li>&ldquo;Blog Repository&rdquo; - Repository for storing website code: &ldquo;Blog&rdquo;<ol><li>Make Public, no README, simply click &ldquo;Create repository&rdquo;</li></ol></li><li>&ldquo;Production Repository&rdquo; - Repository for deploying website that&rsquo;s hosted through Github Pages: &ldquo;MParnin.github.io&rdquo;<ol><li>Make Public, no README, simply click &ldquo;Create repository&rdquo;</li></ol></li></ol></li><li>Choose theme for site: <a href=https://themes.gohugo.io/>https://themes.gohugo.io/</a> (PaperMod was used for this site)</li><li>Clone &ldquo;Blog&rdquo; to local machine: <code>git clone git@github.com:MParnin/Blog.git</code></li><li>Change to &ldquo;Blog&rdquo; directory: <code>cd Blog</code></li><li>Create a new Hugo site: <code>hugo new site MParnin.github.io</code></li><li>Change to new directory: <code>cd MParnin.github.io</code></li><li>Clone theme to newly created boiler plate code for website: <code>git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1</code></li><li>Setup the config file:<ol><li>Open the config file in a text editor: <code>code config.toml</code></li><li>Add the theme to the end of the config file: <code>theme = "PaperMod"</code></li><li>Change the title: <code>MP</code></li><li>Change the base URL to match Github production repo: <code>baseURL = https://MParnin.github.io/</code></li><li>Save changes and exit code editor</li></ol></li><li>Preview site locally:<ol><li>Make sure in directory with config.toml</li><li>Run Hugo server: <code>hugo server</code></li><li>Visit the address of the local site: <code>http://localhost:1313/</code> (can ctrl-click link in terminal)</li><li>Stop server when finished viewing: <code>Ctrl+c</code></li></ol></li><li>Test creating a new post:<ol><li>Create file: <code>hugo new posts/hellomom.md</code></li><li>Edit file: <code>code /content/posts/hellomom.md</code><ol><li><ol><li>Set title of post: <code>title: "Hello Mom!"</code></li></ol></li><li>Delete draft mode line</li><li>Add content below second &ldquo;&mdash;&rdquo;:<ol><li>Add plaintext: <code>Hey Mom checkout my new site!</code></li><li>Add code:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Hello Mom!&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ol start=3><li>Save and exit</li></ol></li></ol></li></ol></li><li>Add &ldquo;Blog&rdquo; as submodule to store static assets for website:<ol><li>Need one commit for &ldquo;MParnin.github.io&rdquo; repo and set the main branch to &ldquo;main&rdquo;:<ol><li>Make a temp directory to clone repo to: <code>mkdir ~/tmp</code></li><li>Change to temp directory: <code>cd ~/tmp</code></li><li>Clone Production repository: <code>git clone git@github.com:MParnin/MParnin.github.io.git</code></li><li>Change to cloned directory: <code>cd MParnin.github.io</code></li><li>Checkout a new branch: <code>git checkout -b main</code></li><li>Create a readme file: <code>touch README.md</code></li><li>Check status to see untracked files: <code>git status</code></li><li>Add new all new files to be tracked: <code>git add .</code></li><li>Commit tracked files: <code>git commit -m "Adding README"</code></li><li>Push to Main branch on Github: <code>git push origin main</code></li><li>Confirm on Github the file was added and branch is set to &ldquo;main&rdquo;</li><li>Delete temp files: <code>rm -rf tmp</code></li></ol></li><li>Add a git submodule which will reference &ldquo;Production&rdquo; repository:<ol><li>Change to root site directory: <code>cd ~/Documents/Blog/MParnin.github.io</code></li><li>Create submodule within root to deploy site from (site deployed from &ldquo;public&rdquo; submodule directory; static files that Hugo generates get added to this directory): <code>git submodule add -b main git@github.com:MParnin/MParnin.github.io.git public</code></li></ol></li></ol></li><li>Review site before deploying: <code>hugo server</code></li><li>Generate static files into &ldquo;public&rdquo;:<ol><li>Change to root site directory: <code>cd ~/Documents/Blog/MParnin.github.io</code></li><li>Create files for selected theme: <code>hugo -t PaperMod</code></li><li>Confirm files were generated: <code>cd public</code></li><li>Confirm origin is directed to Production repository: <code>git remote -v</code></li><li>Check status of files: <code>git status</code></li><li>Add all static files: <code>git add .</code></li><li>Commit static files: <code>git commit -m "Initial commit"</code></li><li>Push the origin files to the main branch: <code>git push origin main</code><ol><li>Confirm all static files are in Production repo on Github. These files are now automatically deployed to <code>https://MParnin.github.io</code>. This site is published because it is hosted through Github Pages which can be seen in &ldquo;Settings > Pages&rdquo; for the Production repositories settings.</li></ol></li></ol></li></ol><h2 id=creating-a-new-post>Creating a New Post<a hidden class=anchor aria-hidden=true href=#creating-a-new-post>#</a></h2><ol><li>Create a new post:<ol><li>Navigate to root of site: <code>cd /Documents/Blog/MParnin.github.io</code></li><li>Create new post file: <code>hugo new posts/&lt;name.md></code></li><li>Edit post: <code>code /content/posts/&lt;post-title>.md</code><ol><li>Set title of post: <code>title: "Hello Mom!"</code></li><li>Delete draft mode</li><li>Save and exit</li></ol></li></ol></li><li>Generate static files into &ldquo;public&rdquo; and push to github to update site:<ol><li>Change to root site directory: <code>cd ~/Documents/Blog/MParnin.github.io</code></li><li>Create files for selected theme: <code>hugo -t PaperMod</code></li><li>Confirm files were generated: <code>cd public</code></li><li>Confirm origin is directed to Production repository: <code>git remote -v</code></li><li>Check status of files: <code>git status</code></li><li>Add all static files: <code>git add .</code></li><li>Commit static files: <code>git commit -m "Initial commit"</code></li><li>Push the origin files to the main branch: <code>git push origin main</code></li></ol></li></ol><h2 id=modifications>Modifications<a hidden class=anchor aria-hidden=true href=#modifications>#</a></h2><ol><li>Moved table of contents to left side of page:<ol><li>Replace the contents of <code>themes/PaperMod/layouts/partials/toc.html</code> with the following (comment out what is currently in the file):</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>{{- $headers := findRE &#34;<span class=p>&lt;</span><span class=nt>h</span><span class=err>[</span><span class=na>1-6</span><span class=err>].*?</span><span class=p>&gt;</span>(.|\n])+?<span class=err>&lt;</span>/h[1-6]&gt;&#34; .Content -}}
+</span></span><span class=line><span class=cl>{{- $has_headers := ge (len $headers) 1 -}}
+</span></span><span class=line><span class=cl>{{- if $has_headers -}}
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>aside</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;toc-container&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;toc-container wide&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;toc&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>		<span class=p>&lt;</span><span class=nt>details</span> <span class=err>{{</span><span class=na>if</span> <span class=err>(.</span><span class=na>Param</span> <span class=err>&#34;</span><span class=na>TocOpen</span><span class=err>&#34;)</span> <span class=err>}}</span> <span class=na>open</span><span class=err>{{</span> <span class=na>end</span> <span class=err>}}</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>			<span class=p>&lt;</span><span class=nt>summary</span> <span class=na>accesskey</span><span class=o>=</span><span class=s>&#34;c&#34;</span> <span class=na>title</span><span class=o>=</span><span class=s>&#34;(Alt + C)&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>				<span class=p>&lt;</span><span class=nt>span</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;details&#34;</span><span class=p>&gt;</span>{{- i18n &#34;toc&#34; | default &#34;Table of Contents&#34; }}<span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>			<span class=p>&lt;/</span><span class=nt>summary</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>			<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;inner&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>				{{- $largest := 6 -}}
+</span></span><span class=line><span class=cl>				{{- range $headers -}}
+</span></span><span class=line><span class=cl>				{{- $headerLevel := index (findRE &#34;[1-6]&#34; . 1) 0 -}}
+</span></span><span class=line><span class=cl>				{{- $headerLevel := len (seq $headerLevel) -}}
+</span></span><span class=line><span class=cl>				{{- if lt $headerLevel $largest -}}
+</span></span><span class=line><span class=cl>				{{- $largest = $headerLevel -}}
+</span></span><span class=line><span class=cl>				{{- end -}}
+</span></span><span class=line><span class=cl>				{{- end -}}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>				{{- $firstHeaderLevel := len (seq (index (findRE &#34;[1-6]&#34; (index $headers 0) 1) 0)) -}}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>				{{- $.Scratch.Set &#34;bareul&#34; slice -}}
+</span></span><span class=line><span class=cl>				<span class=p>&lt;</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>					{{- range seq (sub $firstHeaderLevel $largest) -}}
+</span></span><span class=line><span class=cl>					<span class=p>&lt;</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>						{{- $.Scratch.Add &#34;bareul&#34; (sub (add $largest .) 1) -}}
+</span></span><span class=line><span class=cl>						{{- end -}}
+</span></span><span class=line><span class=cl>						{{- range $i, $header := $headers -}}
+</span></span><span class=line><span class=cl>						{{- $headerLevel := index (findRE &#34;[1-6]&#34; . 1) 0 -}}
+</span></span><span class=line><span class=cl>						{{- $headerLevel := len (seq $headerLevel) -}}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>						{{/* get id=&#34;xyz&#34; */}}
+</span></span><span class=line><span class=cl>						{{- $id := index (findRE &#34;(id=\&#34;(.*?)\&#34;)&#34; $header 9) 0 }}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>						{{- /* strip id=&#34;&#34; to leave xyz, no way to get regex capturing groups in hugo */ -}}
+</span></span><span class=line><span class=cl>						{{- $cleanedID := replace (replace $id &#34;id=\&#34;&#34; &#34;&#34;) &#34;\&#34;&#34; &#34;&#34; }}
+</span></span><span class=line><span class=cl>						{{- $header := replaceRE &#34;<span class=p>&lt;</span><span class=nt>h</span><span class=err>[</span><span class=na>1-6</span><span class=err>].*?</span><span class=p>&gt;</span>((.|\n])+?)<span class=err>&lt;</span>/h[1-6]&gt;&#34; &#34;$1&#34; $header -}}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>						{{- if ne $i 0 -}}
+</span></span><span class=line><span class=cl>						{{- $prevHeaderLevel := index (findRE &#34;[1-6]&#34; (index $headers (sub $i 1)) 1) 0 -}}
+</span></span><span class=line><span class=cl>						{{- $prevHeaderLevel := len (seq $prevHeaderLevel) -}}
+</span></span><span class=line><span class=cl>						{{- if gt $headerLevel $prevHeaderLevel -}}
+</span></span><span class=line><span class=cl>						{{- range seq $prevHeaderLevel (sub $headerLevel 1) -}}
+</span></span><span class=line><span class=cl>						<span class=p>&lt;</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>							{{/* the first should not be recorded */}}
+</span></span><span class=line><span class=cl>							{{- if ne $prevHeaderLevel . -}}
+</span></span><span class=line><span class=cl>							{{- $.Scratch.Add &#34;bareul&#34; . -}}
+</span></span><span class=line><span class=cl>							{{- end -}}
+</span></span><span class=line><span class=cl>							{{- end -}}
+</span></span><span class=line><span class=cl>							{{- else -}}
+</span></span><span class=line><span class=cl>							<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>							{{- if lt $headerLevel $prevHeaderLevel -}}
+</span></span><span class=line><span class=cl>							{{- range seq (sub $prevHeaderLevel 1) -1 $headerLevel -}}
+</span></span><span class=line><span class=cl>							{{- if in ($.Scratch.Get &#34;bareul&#34;) . -}}
+</span></span><span class=line><span class=cl>						<span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>						{{/* manually do pop item */}}
+</span></span><span class=line><span class=cl>						{{- $tmp := $.Scratch.Get &#34;bareul&#34; -}}
+</span></span><span class=line><span class=cl>						{{- $.Scratch.Delete &#34;bareul&#34; -}}
+</span></span><span class=line><span class=cl>						{{- $.Scratch.Set &#34;bareul&#34; slice}}
+</span></span><span class=line><span class=cl>						{{- range seq (sub (len $tmp) 1) -}}
+</span></span><span class=line><span class=cl>						{{- $.Scratch.Add &#34;bareul&#34; (index $tmp (sub . 1)) -}}
+</span></span><span class=line><span class=cl>						{{- end -}}
+</span></span><span class=line><span class=cl>						{{- else -}}
+</span></span><span class=line><span class=cl>					<span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>					<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>					{{- end -}}
+</span></span><span class=line><span class=cl>					{{- end -}}
+</span></span><span class=line><span class=cl>					{{- end -}}
+</span></span><span class=line><span class=cl>					{{- end }}
+</span></span><span class=line><span class=cl>					<span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>						<span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;#{{- $cleanedID -}}&#34;</span> <span class=na>aria-label</span><span class=o>=</span><span class=s>&#34;{{- $header | plainify -}}&#34;</span><span class=p>&gt;</span>{{- $header | safeHTML -}}<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>						{{- else }}
+</span></span><span class=line><span class=cl>					<span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>						<span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;#{{- $cleanedID -}}&#34;</span> <span class=na>aria-label</span><span class=o>=</span><span class=s>&#34;{{- $header | plainify -}}&#34;</span><span class=p>&gt;</span>{{- $header | safeHTML -}}<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>						{{- end -}}
+</span></span><span class=line><span class=cl>						{{- end -}}
+</span></span><span class=line><span class=cl>						<span class=c>&lt;!-- {{- $firstHeaderLevel := len (seq (index (findRE &#34;[1-6]&#34; (index $headers 0) 1) 0)) -}} --&gt;</span>
+</span></span><span class=line><span class=cl>						{{- $firstHeaderLevel := $largest }}
+</span></span><span class=line><span class=cl>						{{- $lastHeaderLevel := len (seq (index (findRE &#34;[1-6]&#34; (index $headers (sub (len $headers) 1)) 1) 0)) }}
+</span></span><span class=line><span class=cl>					<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>					{{- range seq (sub $lastHeaderLevel $firstHeaderLevel) -}}
+</span></span><span class=line><span class=cl>					{{- if in ($.Scratch.Get &#34;bareul&#34;) (add . $firstHeaderLevel) }}
+</span></span><span class=line><span class=cl>				<span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>				{{- else }}
+</span></span><span class=line><span class=cl>				<span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>				<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>				{{- end -}}
+</span></span><span class=line><span class=cl>				{{- end }}
+</span></span><span class=line><span class=cl>				<span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>			<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>		<span class=p>&lt;/</span><span class=nt>details</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>	<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>aside</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>	<span class=kd>let</span> <span class=nx>activeElement</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=kd>let</span> <span class=nx>elements</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=nb>window</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;DOMContentLoaded&#39;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=nx>checkTocPosition</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=nx>elements</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelectorAll</span><span class=p>(</span><span class=s1>&#39;h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		<span class=c1>// Make the first header active
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nx>activeElement</span> <span class=o>=</span> <span class=nx>elements</span><span class=p>[</span><span class=mi>0</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>		<span class=kr>const</span> <span class=nx>id</span> <span class=o>=</span> <span class=nb>encodeURI</span><span class=p>(</span><span class=nx>activeElement</span><span class=p>.</span><span class=nx>getAttribute</span><span class=p>(</span><span class=s1>&#39;id&#39;</span><span class=p>)).</span><span class=nx>toLowerCase</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>		<span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=sb>`.inner ul li a[href=&#34;#</span><span class=si>${</span><span class=nx>id</span><span class=si>}</span><span class=sb>&#34;]`</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;active&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=p>},</span> <span class=kc>false</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=nb>window</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;resize&#39;</span><span class=p>,</span> <span class=kd>function</span><span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=nx>checkTocPosition</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>	<span class=p>},</span> <span class=kc>false</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=nb>window</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;scroll&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=c1>// Check if there is an object in the top half of the screen or keep the last item active
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nx>activeElement</span> <span class=o>=</span> <span class=nb>Array</span><span class=p>.</span><span class=nx>from</span><span class=p>(</span><span class=nx>elements</span><span class=p>).</span><span class=nx>find</span><span class=p>((</span><span class=nx>element</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=k>if</span> <span class=p>((</span><span class=nx>getOffsetTop</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=o>-</span> <span class=nb>window</span><span class=p>.</span><span class=nx>pageYOffset</span><span class=p>)</span> <span class=o>&gt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> 
+</span></span><span class=line><span class=cl>				<span class=p>(</span><span class=nx>getOffsetTop</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=o>-</span> <span class=nb>window</span><span class=p>.</span><span class=nx>pageYOffset</span><span class=p>)</span> <span class=o>&lt;</span> <span class=nb>window</span><span class=p>.</span><span class=nx>innerHeight</span><span class=o>/</span><span class=mi>2</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>				<span class=k>return</span> <span class=nx>element</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>		<span class=p>})</span> <span class=o>||</span> <span class=nx>activeElement</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=nx>elements</span><span class=p>.</span><span class=nx>forEach</span><span class=p>(</span><span class=nx>element</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=kr>const</span> <span class=nx>id</span> <span class=o>=</span> <span class=nb>encodeURI</span><span class=p>(</span><span class=nx>element</span><span class=p>.</span><span class=nx>getAttribute</span><span class=p>(</span><span class=s1>&#39;id&#39;</span><span class=p>)).</span><span class=nx>toLowerCase</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>			<span class=k>if</span> <span class=p>(</span><span class=nx>element</span> <span class=o>===</span> <span class=nx>activeElement</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>				<span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=sb>`.inner ul li a[href=&#34;#</span><span class=si>${</span><span class=nx>id</span><span class=si>}</span><span class=sb>&#34;]`</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;active&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>			<span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>				<span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=sb>`.inner ul li a[href=&#34;#</span><span class=si>${</span><span class=nx>id</span><span class=si>}</span><span class=sb>&#34;]`</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>remove</span><span class=p>(</span><span class=s1>&#39;active&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>		<span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=p>},</span> <span class=kc>false</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>main</span> <span class=o>=</span> <span class=nb>parseInt</span><span class=p>(</span><span class=nx>getComputedStyle</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>).</span><span class=nx>getPropertyValue</span><span class=p>(</span><span class=s1>&#39;--article-width&#39;</span><span class=p>),</span> <span class=mi>10</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>toc</span> <span class=o>=</span> <span class=nb>parseInt</span><span class=p>(</span><span class=nx>getComputedStyle</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>).</span><span class=nx>getPropertyValue</span><span class=p>(</span><span class=s1>&#39;--toc-width&#39;</span><span class=p>),</span> <span class=mi>10</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>gap</span> <span class=o>=</span> <span class=nb>parseInt</span><span class=p>(</span><span class=nx>getComputedStyle</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>).</span><span class=nx>getPropertyValue</span><span class=p>(</span><span class=s1>&#39;--gap&#39;</span><span class=p>),</span> <span class=mi>10</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=kd>function</span> <span class=nx>checkTocPosition</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=kr>const</span> <span class=nx>width</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>scrollWidth</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=p>(</span><span class=nx>width</span> <span class=o>-</span> <span class=nx>main</span> <span class=o>-</span> <span class=p>(</span><span class=nx>toc</span> <span class=o>*</span> <span class=mi>2</span><span class=p>)</span> <span class=o>-</span> <span class=p>(</span><span class=nx>gap</span> <span class=o>*</span> <span class=mi>4</span><span class=p>)</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;toc-container&#34;</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s2>&#34;wide&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s2>&#34;toc-container&#34;</span><span class=p>).</span><span class=nx>classList</span><span class=p>.</span><span class=nx>remove</span><span class=p>(</span><span class=s2>&#34;wide&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=kd>function</span> <span class=nx>getOffsetTop</span><span class=p>(</span><span class=nx>element</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>element</span><span class=p>.</span><span class=nx>getClientRects</span><span class=p>().</span><span class=nx>length</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span>
+</span></span><span class=line><span class=cl>		<span class=kd>let</span> <span class=nx>rect</span> <span class=o>=</span> <span class=nx>element</span><span class=p>.</span><span class=nx>getBoundingClientRect</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>		<span class=kd>let</span> <span class=nx>win</span> <span class=o>=</span> <span class=nx>element</span><span class=p>.</span><span class=nx>ownerDocument</span><span class=p>.</span><span class=nx>defaultView</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>rect</span><span class=p>.</span><span class=nx>top</span> <span class=o>+</span> <span class=nx>win</span><span class=p>.</span><span class=nx>pageYOffset</span><span class=p>;</span>   
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>{{- end }}
+</span></span></code></pre></td></tr></table></div></div></li></ol></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://MParnin.github.io/>MP</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
