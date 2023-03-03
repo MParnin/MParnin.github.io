@@ -2,10 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://MParnin.github.io/write-ups/hackthebox/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
     <loc>https://MParnin.github.io/projects/homelab/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
     <loc>https://MParnin.github.io/projects/cloudlab/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/tryhackme/</loc>
+    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
+  </url><url>
+    <loc>https://MParnin.github.io/write-ups/overthewire/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
     <loc>https://MParnin.github.io/posts/blogconfig/</loc>
@@ -32,9 +41,6 @@
     <loc>https://MParnin.github.io/posts/dactylmanuform/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
-    <loc>https://MParnin.github.io/write-ups/hackthebox/</loc>
-    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
-  </url><url>
     <loc>https://MParnin.github.io/write-ups/hackthebox/htb_armageddon/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
@@ -44,16 +50,10 @@
     <loc>https://MParnin.github.io/write-ups/hackthebox/htb_lame/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
-    <loc>https://MParnin.github.io/write-ups/overthewire/</loc>
-    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
-  </url><url>
     <loc>https://MParnin.github.io/write-ups/overthewire/otw_bandit/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
     <loc>https://MParnin.github.io/projects/</loc>
-    <lastmod>2023-02-26T11:44:16-05:00</lastmod>
-  </url><url>
-    <loc>https://MParnin.github.io/write-ups/tryhackme/</loc>
     <lastmod>2023-02-26T11:44:16-05:00</lastmod>
   </url><url>
     <loc>https://MParnin.github.io/write-ups/tryhackme/thm_picklerick/</loc>
