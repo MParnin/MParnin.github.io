@@ -21,16 +21,5 @@
       <description>Brief walkthrough of the steps taken to create this blog in Linux</description>
     </item>
     
-    <item>
-      <title>Dactyl Manuform Build</title>
-      <link>https://MParnin.github.io/posts/dactylmanuform/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
-      
-      <guid>https://MParnin.github.io/posts/dactylmanuform/</guid>
-      <description>This is currently a work-in-progress and will contain info about my Dactyl Manuform build.
-Swiches: Kailh box jade
-Key caps: Drop MT3 /DEV/TTY ortho kit</description>
-    </item>
-    
   </channel>
 </rss>

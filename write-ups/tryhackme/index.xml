@@ -12,24 +12,5 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/write-ups/tryhackme/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>TryHackMe - Pickle Rick</title>
-      <link>https://MParnin.github.io/write-ups/tryhackme/thm_picklerick/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
-      
-      <guid>https://MParnin.github.io/write-ups/tryhackme/thm_picklerick/</guid>
-      <description>This will contain my write-up for HTB&amp;rsquo;s Armageddon
-1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
-    </item>
-    
-    <item>
-      <title>TryHackMe - Steel Mountain</title>
-      <link>https://MParnin.github.io/write-ups/tryhackme/thm_steelmountain/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
-      
-      <guid>https://MParnin.github.io/write-ups/tryhackme/thm_steelmountain/</guid>
-      <description>This will contain my write-up for TryHackMe&amp;rsquo;s Steel Mountain.</description>
-    </item>
-    
   </channel>
 </rss>

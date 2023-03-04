@@ -13,13 +13,14 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/write-ups/overthewire/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>OverTheWire - Bandit</title>
+      <title>Bandit</title>
       <link>https://MParnin.github.io/write-ups/overthewire/otw_bandit/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://MParnin.github.io/write-ups/overthewire/otw_bandit/</guid>
-      <description>This will contain my write-up for HTB&amp;rsquo;s Armageddon
-1 print(&amp;#34;Hello Mom!&amp;#34;) </description>
+      <description>Background The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basic of using Linux.
+sshpass Command 1 sshpass -p `cat bandit0` ssh bandit0@bandit.labs.overthewire.org -p 2220 Levels 0 thru 4 Bandit 0 (https://overthewire.org/wargames/bandit/bandit0.html)
+1 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.</description>
     </item>
     
   </channel>
