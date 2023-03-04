@@ -13,24 +13,6 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://MParnin.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Home Lab</title>
-      <link>https://MParnin.github.io/projects/homelab/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
-      
-      <guid>https://MParnin.github.io/projects/homelab/</guid>
-      <description>This will contain info about my Proxmox server</description>
-    </item>
-    
-    <item>
-      <title>Cloud Lab Setup</title>
-      <link>https://MParnin.github.io/projects/cloudlab/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
-      
-      <guid>https://MParnin.github.io/projects/cloudlab/</guid>
-      <description>This will contain info about my cloud lab setup.</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>https://MParnin.github.io/about/</link>
       <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
@@ -49,6 +31,24 @@ Goal Become employable within the Cybersecurity field Achievements TryHackMe&amp
       <description>Background The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basic of using Linux.
 sshpass Command 1 sshpass -p `cat bandit0` ssh bandit0@bandit.labs.overthewire.org -p 2220 Levels 0 thru 4 Bandit 0 (https://overthewire.org/wargames/bandit/bandit0.html)
 1 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.</description>
+    </item>
+    
+    <item>
+      <title>Home Lab</title>
+      <link>https://MParnin.github.io/projects/homelab/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/projects/homelab/</guid>
+      <description>This will contain info about my Proxmox server</description>
+    </item>
+    
+    <item>
+      <title>Cloud Lab Setup</title>
+      <link>https://MParnin.github.io/projects/cloudlab/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/projects/cloudlab/</guid>
+      <description>This will contain info about my cloud lab setup.</description>
     </item>
     
     <item>
