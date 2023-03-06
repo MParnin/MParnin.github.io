@@ -12,5 +12,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Feb 2023 11:44:16 -0500</lastBuildDate><atom:link href="https://MParnin.github.io/write-ups/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lame</title>
+      <link>https://MParnin.github.io/write-ups/hackthebox/htb_lame/</link>
+      <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://MParnin.github.io/write-ups/hackthebox/htb_lame/</guid>
+      <description>Enumeration Started with an Nmap scan nmap -sC -sV -Pn -oA nmap/full 10.10.10.3 -sC Scan with default NSE scripts. Considered useful for discovery and safe. -sV Attempts to determine the version of the service running on port. -Pn Ping probes were being blocked. -oA nmap/full Outputs all format results to a file named full in the nmap directory. VSFTPD CVE-2011-2523
+Starting with VSFTPD, I searched exploit-db for vsftpd 2.3.4 and found the following backdoor command execution exploits: https://www.</description>
+    </item>
+    
   </channel>
 </rss>

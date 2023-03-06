@@ -18,7 +18,7 @@
       <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://MParnin.github.io/write-ups/overthewire/otw_bandit/</guid>
-      <description>Background The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basic of using Linux.
+      <description>Background The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basics of the Linux command line.
 sshpass Command 1 sshpass -p `cat bandit0` ssh bandit0@bandit.labs.overthewire.org -p 2220 Levels 0 thru 4 Bandit 0 (https://overthewire.org/wargames/bandit/bandit0.html)
 1 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.</description>
     </item>

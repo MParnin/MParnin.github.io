@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://MParnin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://MParnin.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://MParnin.github.io/about/</link>
@@ -28,9 +28,27 @@ Goal Become employable within the Cybersecurity field Achievements TryHackMe&amp
       <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://MParnin.github.io/write-ups/overthewire/otw_bandit/</guid>
-      <description>Background The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basic of using Linux.
+      <description>Background The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames as well as the basics of the Linux command line.
 sshpass Command 1 sshpass -p `cat bandit0` ssh bandit0@bandit.labs.overthewire.org -p 2220 Levels 0 thru 4 Bandit 0 (https://overthewire.org/wargames/bandit/bandit0.html)
 1 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Lab Setup</title>
+      <link>https://MParnin.github.io/projects/cloudlab/</link>
+      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      
+      <guid>https://MParnin.github.io/projects/cloudlab/</guid>
+      <description>This will contain info about my cloud lab setup.</description>
+    </item>
+    
+    <item>
+      <title>Active Directory Lab Setup</title>
+      <link>https://MParnin.github.io/projects/adlab/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://MParnin.github.io/projects/adlab/</guid>
+      <description>This will contain info about my active directory lab setup.</description>
     </item>
     
     <item>
@@ -43,12 +61,13 @@ sshpass Command 1 sshpass -p `cat bandit0` ssh bandit0@bandit.labs.overthewire.o
     </item>
     
     <item>
-      <title>Cloud Lab Setup</title>
-      <link>https://MParnin.github.io/projects/cloudlab/</link>
-      <pubDate>Sun, 26 Feb 2023 11:44:16 -0500</pubDate>
+      <title>Lame</title>
+      <link>https://MParnin.github.io/write-ups/hackthebox/htb_lame/</link>
+      <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://MParnin.github.io/projects/cloudlab/</guid>
-      <description>This will contain info about my cloud lab setup.</description>
+      <guid>https://MParnin.github.io/write-ups/hackthebox/htb_lame/</guid>
+      <description>Enumeration Started with an Nmap scan nmap -sC -sV -Pn -oA nmap/full 10.10.10.3 -sC Scan with default NSE scripts. Considered useful for discovery and safe. -sV Attempts to determine the version of the service running on port. -Pn Ping probes were being blocked. -oA nmap/full Outputs all format results to a file named full in the nmap directory. VSFTPD CVE-2011-2523
+Starting with VSFTPD, I searched exploit-db for vsftpd 2.3.4 and found the following backdoor command execution exploits: https://www.</description>
     </item>
     
     <item>
